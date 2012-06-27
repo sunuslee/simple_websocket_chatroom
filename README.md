@@ -1,5 +1,5 @@
 # Simple Websockets chat room
-This tiny project is using em-WebSocket 
+This tiny project is using em-WebSocket working together with ruby
 * [Ruby & Websockets: TCP for the Web](http://www.igvita.com/2009/12/22/ruby-websockets-tcp-for-the-browser/)
 and javascript Websockets apis to implement a very simple chat room.
 
