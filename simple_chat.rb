@@ -1,4 +1,4 @@
-require File.expand_path('../../lib/em-websocket', __FILE__)
+require File.expand_path('../lib/em-websocket', __FILE__)
 
 $wss = {}
 
