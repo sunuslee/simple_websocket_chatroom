@@ -45,6 +45,13 @@ def message_handler(ws, msg)
     end
 end
 
+def user_disconnect(ws)
+    if $wss.has_value?(ws)
+        puts $wss.key(ws) + ' is offline now'
+        $wss.delete($wss.key(ws))
+    end
+end
+
 EventMachine::WebSocket.start(:host => "0.0.0.0", :port => 8080, :debug => true) do |ws|
     ws.onopen    { ws.send "Hello Client!" }
     ws.onmessage do |msg|
@@ -52,6 +59,7 @@ EventMachine::WebSocket.start(:host => "0.0.0.0", :port => 8080, :debug => true)
             message_handler(ws, msg)
         rescue
         end
-    ws.onclose   { puts "WebSocket closed" }
+    end
+    ws.onclose   { user_disconnect(ws) }
     ws.onerror   { |e| puts "Error: #{e.message}" }
 end
