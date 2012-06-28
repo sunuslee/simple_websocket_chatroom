@@ -3,7 +3,6 @@ function init() {
     function showMsg(string) {
         var recvMsgarea = document.getElementById("recvMsgarea");
         recvMsgarea.value += ('\n' + string);
-        //recvMsgarea.scrollTop = recvMsgarea.scrollHeight - recvMsgarea.clientHeight;
         recvMsgarea.scrollTop = 99999;
     }
 

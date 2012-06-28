@@ -4,7 +4,7 @@ This tiny project is using em-WebSocket working together with ruby
 * [em-Websockets repo](https://github.com/igrigorik/em-websocket)
 and javascript Websockets apis to implement a very simple chat room.
 
-## Userage:
+## Usage:
 install the neceressary dependencies first
 ```shell
 bundle install
